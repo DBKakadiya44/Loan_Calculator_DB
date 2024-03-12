@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/maincolor"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imBack"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/back"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/mainname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="30"
+            android:gravity="center"
+            android:text="PAN Card Information"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/voting" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Voting Card"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:text="➺ Permanent Account Number abbreviated as PAN is a unique 10-digit alphanumeric number issued by the Income Tax Department to Indian taxpayers."
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:text="➺ The department records all tax-related transactions and information of an individual against his unique permanent account number. This allows the taxman to link all tax-related activities with the department."
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:text="➺ PAN primarily acts as a database for all individual transactions, such as the tax collected at source (TCS)/tax deducted at source (TDS) credits, income tax payments, return on gift/investments/wealth, etc. Simply put, the PAN enables the tax department to identify an individual’s tax-related transaction."
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="@drawable/border_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:text="➺ The tax department issues an individual’s PAN on a physical card referred to as the PAN card.\n\n ➺ The PAN card includes information, such as the PAN number, photograph, name, and date of birth of the holder.
+
+PAN has a typical format of ABCTY1234D. \n\n ➺ The first three characters, i.e. ‘ABC’ in the above number is an alphabetic series ranging between AAA and ZZZ. The 4th character, i.e. ‘T’, represents the PAN holder’s status.\n\n ➺  The alphabet ‘T’ represents Trust, ‘F’ for Firm, ‘H’ for HUF, ‘P’ for Individual, ‘C’ for Company etc. The 5th character, i.e. \n\n ➺ ‘Y’, represents the first alphabet the PAN holder’s last name. The next four characters are sequential digits ranging between 0001 and 9999. The 10th character, i.e.\n\n ➺ ‘D’, is an alphabetic check digit that runs from A to Z."
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ListView
+                        android:id="@+id/user_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@null"
+                        android:dividerHeight="1dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
